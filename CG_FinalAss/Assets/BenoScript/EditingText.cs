@@ -10,7 +10,7 @@ public class EditingText : MonoBehaviour
     public GameObject panel;
     public InputField inputText;
     Text outputText;
-    public Text category;
+    public Text category, sampletext, placeholder, placeholder2;
     string textcontent;
 
     // Start is called before the first frame update
@@ -28,8 +28,10 @@ public class EditingText : MonoBehaviour
     public void openPanel()
     {
         button = EventSystem.current.currentSelectedGameObject;
-        panel.SetActive(true);
         outputText = button.gameObject.GetComponentInChildren<Text>();
+        placeholder.text = outputText.text;
+        inputText.text = "";
+        panel.SetActive(true);
         Debug.Log(outputText.name);
         category.text = outputText.name.ToString();
     }

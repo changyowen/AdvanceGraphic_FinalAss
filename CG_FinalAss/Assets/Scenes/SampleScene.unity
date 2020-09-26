@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 32840181}
   - component: {fileID: 32840183}
   - component: {fileID: 32840182}
-  - component: {fileID: 32840184}
   m_Layer: 5
   m_Name: InputPanel
   m_TagString: Untagged
@@ -201,19 +200,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 32840180}
   m_CullTransparentMesh: 0
---- !u!114 &32840184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 32840180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bdbc6b01be64b244bc663355be8f016, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  function: {fileID: 0}
 --- !u!1 &68579910
 GameObject:
   m_ObjectHideFlags: 0
@@ -3522,6 +3508,7 @@ GameObject:
   - component: {fileID: 878454537}
   - component: {fileID: 878454536}
   - component: {fileID: 878454539}
+  - component: {fileID: 878454540}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -3592,6 +3579,41 @@ MonoBehaviour:
   panel: {fileID: 32840180}
   inputText: {fileID: 1421370980}
   category: {fileID: 1659403930}
+  sampletext: {fileID: 0}
+  placeholder: {fileID: 1955282310}
+  placeholder2: {fileID: 593108318}
+--- !u!114 &878454540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878454535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9586cb8596a2b7743a5607f17dc2d34b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profileText:
+  - {fileID: 289389151}
+  - {fileID: 362100537}
+  - {fileID: 1520213621}
+  - {fileID: 1867575248}
+  - {fileID: 1712519776}
+  biographyText:
+  - {fileID: 994991096}
+  - {fileID: 1548490600}
+  - {fileID: 1669545491}
+  - {fileID: 2070004857}
+  - {fileID: 989510905}
+  - {fileID: 1971453627}
+  - {fileID: 618273265}
+  - {fileID: 1041802239}
+  - {fileID: 1690379261}
+  - {fileID: 1807297736}
+  - {fileID: 2056405894}
+  experience: {fileID: 645011749}
+  skills: {fileID: 1898480961}
 --- !u!1 &894179289
 GameObject:
   m_ObjectHideFlags: 0
@@ -4458,7 +4480,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1016295969}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 878454539}
+        m_MethodName: openPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1016295969
 MonoBehaviour:
   m_ObjectHideFlags: 0
