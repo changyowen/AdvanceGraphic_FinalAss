@@ -34,6 +34,11 @@ public class DataStoreLoad : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void DiscardFile()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void LoadFile()
     {
         SceneManager.LoadScene("ProfileEdit");
