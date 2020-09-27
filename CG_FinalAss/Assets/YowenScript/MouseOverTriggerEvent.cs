@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class MouseOverTriggerEvent : MonoBehaviour
 {
-    public GameObject ButtonText;
+    public GameObject ButtonText, Smoke, Player;
+    ParticleSystem smokeParticleSystem;
     Animator TextAnimator;
     bool mouseOver = false;
-
+    
     // Start is called before the first frame update
     void Start()
     {
         TextAnimator = ButtonText.GetComponent<Animator>();
+        smokeParticleSystem = Smoke.GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -50,6 +52,13 @@ public class MouseOverTriggerEvent : MonoBehaviour
                 }
             case "ViewPortfolio":
                 {
+                    if(!smokeParticleSystem.isPlaying)
+                    {
+                        smokeParticleSystem.Play();
+                    }
+                    var emission = smokeParticleSystem.emission;
+                    emission.enabled = true;
+
                     Outline outline = this.gameObject.GetComponent<Outline>();
                     PulsingScript pulsingScript = this.gameObject.transform.parent.gameObject.GetComponent<PulsingScript>();
                     if(outline != null)
@@ -86,6 +95,9 @@ public class MouseOverTriggerEvent : MonoBehaviour
                 }
             case "ViewPortfolio":
                 {
+                    var emission = smokeParticleSystem.emission;
+                    emission.enabled = false;
+
                     Outline outline = this.gameObject.GetComponent<Outline>();
                     if (outline != null)
                     {
