@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2194fe559202da244a6cc0ad8cbc636d
+  - enabled: 1
+    path: Assets/Scenes/ProfileEdit.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/ProfileReading.unity
+    guid: c0fd35cad7b8f9946b3d2d5ec868d2ca
   m_configObjects: {}
