@@ -31,7 +31,7 @@ public class PathFollower_1 : MonoBehaviour
         transform.position = path1.path.GetPointAtDistance(distanceTravelled, end);
 
         float dist = Vector3.Distance(FinalDestination.position, transform.position);
-        if(dist > 0.1)
+        if(dist > 0.05)
         {
             headBobScript.playerMoving = true;
             for(int i = 0; i < 2; i++)
@@ -48,7 +48,7 @@ public class PathFollower_1 : MonoBehaviour
             }
         }
 
-        if (distanceTravelled >= 8)
+        if (distanceTravelled >= 7.5)
         {
             if(!TriggerTurnAnimation)
             {

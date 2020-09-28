@@ -34,8 +34,8 @@ public class HeadBob : MonoBehaviour
         }
         else if(playerMoving == true)
         {
-            bobSpeed = 4.5f;
-            bobAmount = 0.1f;
+            bobSpeed = 5f;
+            bobAmount = 0.06f;
 
             timer += bobSpeed * Time.deltaTime;
 
