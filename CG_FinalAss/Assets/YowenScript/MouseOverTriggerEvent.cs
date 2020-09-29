@@ -110,7 +110,7 @@ public class MouseOverTriggerEvent : MonoBehaviour
         }
     }
 
-    void OnMouseEnter()
+    void OnMouseDown()
     {
         switch (this.gameObject.tag)
         {
