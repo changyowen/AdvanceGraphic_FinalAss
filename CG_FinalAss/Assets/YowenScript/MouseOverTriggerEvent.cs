@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MouseOverTriggerEvent : MonoBehaviour
 {
@@ -107,5 +108,32 @@ public class MouseOverTriggerEvent : MonoBehaviour
                     break;
                 }
         }
+    }
+
+    void OnMouseEnter()
+    {
+        switch (this.gameObject.tag)
+        {
+            case "CreatePortfolio":
+                {
+                    TowardCreateScene();
+                    break;
+                }
+            case "ViewPortfolio":
+                {
+                    TowardViewScene();
+                    break;
+                }
+        }
+    }
+
+    void TowardCreateScene()
+    {
+        //AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Scene3");
+    }
+
+    void TowardViewScene()
+    {
+        //AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Scene3");
     }
 }
