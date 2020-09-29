@@ -11,6 +11,7 @@ public class MouseOverTriggerEvent : MonoBehaviour
     Animator TextAnimator;
     bool mouseOver = false;
     public PlayableDirector playToPc, playToFolder;
+    AsyncOperation asyncOperation;
 
     // Start is called before the first frame update
     void Start()
@@ -132,12 +133,25 @@ public class MouseOverTriggerEvent : MonoBehaviour
     void TowardCreateScene()
     {
         playToPc.Play();
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("ProfileEdit");
+        asyncOperation = SceneManager.LoadSceneAsync("ProfileEdit");
+        asyncOperation.allowSceneActivation = false;
+        StartCoroutine(AllowSceneChange(playToPc));
     }
 
     void TowardViewScene()
     {
         playToFolder.Play();
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("ProfileReading");
+        asyncOperation = SceneManager.LoadSceneAsync("ProfileReading");
+        asyncOperation.allowSceneActivation = false;
+        StartCoroutine(AllowSceneChange(playToFolder));
+    }
+
+    IEnumerator AllowSceneChange(PlayableDirector playable)
+    {
+        while(playable.state == PlayState.Playing)
+        {
+            yield return null;
+        }
+        asyncOperation.allowSceneActivation = true;
     }
 }
