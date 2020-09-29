@@ -3920,6 +3920,7 @@ MonoBehaviour:
   MouseOverObject:
   - {fileID: 942708638}
   - {fileID: 396735960}
+  volume: {fileID: 1298828916}
 --- !u!95 &581080841
 Animator:
   serializedVersion: 3
