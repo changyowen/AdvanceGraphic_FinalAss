@@ -12,6 +12,8 @@ public class HeadBob : MonoBehaviour
     float timer = Mathf.PI / 2; //initialized as this value because this is where sin = 1. So, this will make the camera always start at the crest of the sin wave, simulating someone picking up their foot and starting to walk--you experience a bob upwards when you start walking as your foot pushes off the ground, the left and right bobs come as you walk.
     Vector3 camPos;
 
+    Animator playerAnim;
+
     public bool playerMoving = true;
 
     void Awake()
@@ -23,6 +25,7 @@ public class HeadBob : MonoBehaviour
     {
         if (playerMoving == false) //stand
         {
+            Debug.Log("YES");
             bobSpeed = 1;
             bobAmount = 0.02f;
 

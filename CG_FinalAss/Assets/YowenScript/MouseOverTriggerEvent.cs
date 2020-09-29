@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Playables;
 
 public class MouseOverTriggerEvent : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class MouseOverTriggerEvent : MonoBehaviour
     ParticleSystem smokeParticleSystem;
     Animator TextAnimator;
     bool mouseOver = false;
-    
+    public PlayableDirector playToPc, playToFolder;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -130,10 +132,12 @@ public class MouseOverTriggerEvent : MonoBehaviour
     void TowardCreateScene()
     {
         //AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Scene3");
+        playToPc.Play();
     }
 
     void TowardViewScene()
     {
         //AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Scene3");
+        playToFolder.Play();
     }
 }

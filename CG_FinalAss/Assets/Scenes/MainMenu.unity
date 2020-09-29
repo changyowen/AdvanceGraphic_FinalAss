@@ -746,6 +746,56 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 121216279}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &125316660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 125316662}
+  - component: {fileID: 125316661}
+  m_Layer: 0
+  m_Name: TimelineManager1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &125316661
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125316660}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: b784ea1f1fb5c9144b8e0f3aba00b626, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 0
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 1077644378822738454, guid: b784ea1f1fb5c9144b8e0f3aba00b626, type: 2}
+    value: {fileID: 581080841}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &125316662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125316660}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.575119, y: -2.9530482, z: -20.549454}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &139297711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2502,6 +2552,56 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 305578418}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &306811267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 306811269}
+  - component: {fileID: 306811268}
+  m_Layer: 0
+  m_Name: TimelineManager2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &306811268
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306811267}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 8380304d1dbff92428dfe26b681d190a, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 0
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 6000000896013270517, guid: 8380304d1dbff92428dfe26b681d190a, type: 2}
+    value: {fileID: 581080841}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &306811269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306811267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.613575, y: 1.0883024, z: -1.6265287}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &335486364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2950,7 +3050,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonText: {fileID: 1146208151}
   Smoke: {fileID: 580351758}
-  Player: {fileID: 0}
+  Player: {fileID: 581080838}
+  playToPc: {fileID: 125316661}
+  playToFolder: {fileID: 306811268}
 --- !u!1 &405743373
 GameObject:
   m_ObjectHideFlags: 0
@@ -6244,7 +6346,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonText: {fileID: 352292690}
   Smoke: {fileID: 580351758}
-  Player: {fileID: 0}
+  Player: {fileID: 581080838}
+  playToPc: {fileID: 125316661}
+  playToFolder: {fileID: 306811268}
 --- !u!114 &942708644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8763,7 +8867,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.05
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -8796,7 +8900,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 581080839}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 19.576, y: 173.45201, z: 0.89300007}
+  m_LocalEulerAnglesHint: {x: 343.4265, y: 0.2661859, z: 359.9608}
 --- !u!114 &1298828916
 MonoBehaviour:
   m_ObjectHideFlags: 0
