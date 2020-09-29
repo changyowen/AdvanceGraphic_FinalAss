@@ -129,11 +129,11 @@ public class MouseOverTriggerEvent : MonoBehaviour
 
     void TowardCreateScene()
     {
-        //AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Scene3");
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("ProfileEdit");
     }
 
     void TowardViewScene()
     {
-        //AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Scene3");
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("ProfileReading");
     }
 }
