@@ -135,7 +135,7 @@ public class MouseOverTriggerEvent : MonoBehaviour
         playToPc.Play();
         asyncOperation = SceneManager.LoadSceneAsync("ProfileEdit");
         asyncOperation.allowSceneActivation = false;
-        StartCoroutine(AllowSceneChange(playToPc));
+        StartCoroutine(AllowSceneChange(playToPc, 2));
     }
 
     void TowardViewScene()
@@ -143,15 +143,16 @@ public class MouseOverTriggerEvent : MonoBehaviour
         playToFolder.Play();
         asyncOperation = SceneManager.LoadSceneAsync("ProfileReading");
         asyncOperation.allowSceneActivation = false;
-        StartCoroutine(AllowSceneChange(playToFolder));
+        StartCoroutine(AllowSceneChange(playToFolder, 3));
     }
 
-    IEnumerator AllowSceneChange(PlayableDirector playable)
+    IEnumerator AllowSceneChange(PlayableDirector playable, int index)
     {
         while(playable.state == PlayState.Playing)
         {
             yield return null;
         }
+        OpeningManager.OpeningIndex = index;
         asyncOperation.allowSceneActivation = true;
     }
 }

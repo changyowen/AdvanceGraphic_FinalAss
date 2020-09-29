@@ -25,7 +25,6 @@ public class HeadBob : MonoBehaviour
     {
         if (playerMoving == false) //stand
         {
-            Debug.Log("YES");
             bobSpeed = 1;
             bobAmount = 0.02f;
 

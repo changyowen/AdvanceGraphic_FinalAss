@@ -31,11 +31,13 @@ public class DataStoreLoad : MonoBehaviour
     public void SaveFile()
     {
         SaveLoad.SaveData(this);
+        OpeningManager.OpeningIndex = 2;
         SceneManager.LoadScene("MainMenu");
     }
 
     public void DiscardFile()
     {
+        OpeningManager.OpeningIndex = 3;
         SceneManager.LoadScene("MainMenu");
     }
 
