@@ -7,11 +7,13 @@ public class Navigation : MonoBehaviour
 {
     public GameObject biography, biographyPanel;
     public GameObject skills, skillsPanel;
+    public GameObject saveloadpanel;
     // Start is called before the first frame update
     void Start()
     {
         biographyPanel.SetActive(false);
         skillsPanel.SetActive(false);
+        saveloadpanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,5 +48,10 @@ public class Navigation : MonoBehaviour
         biography.SetActive(true);
         skills.SetActive(true);
         skillsPanel.SetActive(false);
+    }
+
+    public void saveload()
+    {
+        saveloadpanel.SetActive(true);
     }
 }
