@@ -175,6 +175,7 @@ MonoBehaviour:
   portfolio: {fileID: 11400000, guid: 749c0c52a6e49914d8aba5069d3169b6, type: 2}
   index: {fileID: 1580290789}
   portfolioname: {fileID: 960079159}
+  panel: {fileID: 1291055246}
   profileText:
   - {fileID: 710196939}
   - {fileID: 402351039}
@@ -906,6 +907,7 @@ MonoBehaviour:
   portfolio: {fileID: 11400000, guid: 77faba249ab540d49b275c5eb01bdd19, type: 2}
   index: {fileID: 1894864896}
   portfolioname: {fileID: 661610737}
+  panel: {fileID: 1291055246}
   profileText:
   - {fileID: 710196939}
   - {fileID: 402351039}
@@ -3160,6 +3162,7 @@ MonoBehaviour:
   portfolio: {fileID: 11400000, guid: a53470acef5762547a6aef7bc5a66573, type: 2}
   index: {fileID: 932026658}
   portfolioname: {fileID: 118421788}
+  panel: {fileID: 1291055246}
   profileText:
   - {fileID: 710196939}
   - {fileID: 402351039}
@@ -5364,6 +5367,7 @@ MonoBehaviour:
   portfolio: {fileID: 11400000, guid: 6dd9d692874aa6e4ea663373d6119775, type: 2}
   index: {fileID: 1144001431}
   portfolioname: {fileID: 1389163299}
+  panel: {fileID: 1291055246}
   profileText:
   - {fileID: 710196939}
   - {fileID: 402351039}
@@ -5828,6 +5832,7 @@ MonoBehaviour:
   portfolio: {fileID: 11400000, guid: 6e02ada7b1885c64e866e5ee902700d5, type: 2}
   index: {fileID: 691571055}
   portfolioname: {fileID: 682302127}
+  panel: {fileID: 1291055246}
   profileText:
   - {fileID: 710196939}
   - {fileID: 402351039}
@@ -8459,6 +8464,7 @@ MonoBehaviour:
   portfolio: {fileID: 11400000, guid: 0781d14fbbc57dc47aeda191d6ce0a87, type: 2}
   index: {fileID: 847818799}
   portfolioname: {fileID: 1186089725}
+  panel: {fileID: 1291055246}
   profileText:
   - {fileID: 710196939}
   - {fileID: 402351039}
@@ -8533,6 +8539,7 @@ MonoBehaviour:
   portfolio: {fileID: 11400000, guid: fc496e943fe439d4d9a1d76c14e6b0ea, type: 2}
   index: {fileID: 1184944550}
   portfolioname: {fileID: 1951214316}
+  panel: {fileID: 1291055246}
   profileText:
   - {fileID: 710196939}
   - {fileID: 402351039}
@@ -9076,6 +9083,7 @@ MonoBehaviour:
   portfolio: {fileID: 11400000, guid: d893fc57034e1d94f96a392517a31d14, type: 2}
   index: {fileID: 669637275}
   portfolioname: {fileID: 1117899713}
+  panel: {fileID: 1291055246}
   profileText:
   - {fileID: 710196939}
   - {fileID: 402351039}
@@ -10035,6 +10043,7 @@ MonoBehaviour:
   portfolio: {fileID: 11400000, guid: ad0d1c0a5477789488ad2e51dee726aa, type: 2}
   index: {fileID: 1984492444}
   portfolioname: {fileID: 1540650954}
+  panel: {fileID: 1291055246}
   profileText:
   - {fileID: 710196939}
   - {fileID: 402351039}
@@ -10418,6 +10427,7 @@ MonoBehaviour:
   portfolio: {fileID: 11400000, guid: a1c54e1f468d45747b5f5b91811fece2, type: 2}
   index: {fileID: 680224136}
   portfolioname: {fileID: 996710340}
+  panel: {fileID: 1291055246}
   profileText:
   - {fileID: 710196939}
   - {fileID: 402351039}

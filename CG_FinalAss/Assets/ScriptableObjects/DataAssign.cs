@@ -8,6 +8,7 @@ public class DataAssign : MonoBehaviour
 {
     public Portfolio portfolio;
     public Text index, portfolioname;
+    public GameObject panel;
 
     [Header("Profile")]
     public Text[] profileText = new Text[5];
@@ -60,5 +61,6 @@ public class DataAssign : MonoBehaviour
         }
         portfolio.experience = experience.ToString();
         portfolio.skills = skills.ToString();
+        panel.SetActive(false);
     }
 }
