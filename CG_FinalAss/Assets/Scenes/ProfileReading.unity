@@ -4265,7 +4265,7 @@ MonoBehaviour:
   biographyPanel: {fileID: 347779374}
   skills: {fileID: 1235480789}
   skillsPanel: {fileID: 113953036}
-  saveloadpanel: {fileID: 0}
+  saveloadpanel: {fileID: 1291055246}
 --- !u!114 &940383523
 MonoBehaviour:
   m_ObjectHideFlags: 0
