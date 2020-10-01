@@ -9,27 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbeadf8c11c833d44a932a5adb886509, type: 3}
-  m_Name: Portfolio10
+  m_Script: {fileID: 11500000, guid: 7d5bb186098d7404885d66d633a10efa, type: 3}
+  m_Name: ET_23_Expand
   m_EditorClassIdentifier: 
-  indexnumber: 10
-  profileText:
-  - walao
-  - 
-  - 
-  - 
-  - 
-  biographyText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  experience: 
-  skills: 
+  GuideText: Expand

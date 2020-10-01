@@ -94,7 +94,9 @@ public class ExpandUIScript : MonoBehaviour
                     {
                         while (rect.sizeDelta.y < size.y)
                         {
-                            rect.sizeDelta += new Vector2( 0, 80 * Time.deltaTime);
+                            rect.sizeDelta += new Vector2( 0, 160 * Time.deltaTime);
+                            //change button tag to minimize
+                            expandIntroButton.transform.gameObject.tag = "minimize";
                             yield return null;
                         }
                         expandIntroButton_img.sprite = mini_sprite;
@@ -104,7 +106,9 @@ public class ExpandUIScript : MonoBehaviour
                     {
                         while (rect.sizeDelta.y > size.y)
                         {
-                            rect.sizeDelta -= new Vector2( 0, 80 * Time.deltaTime);
+                            rect.sizeDelta -= new Vector2( 0, 160 * Time.deltaTime);
+                            //change button tag to minimize
+                            expandIntroButton.transform.gameObject.tag = "maximize";
                             yield return null;
                         }
                         expandIntroButton_img.sprite = maxi_sprite;
@@ -120,6 +124,8 @@ public class ExpandUIScript : MonoBehaviour
                         while (rect.sizeDelta.y < size.y)
                         {
                             rect.sizeDelta += new Vector2(0, 500 * Time.deltaTime);
+                            //change button tag to minimize
+                            expandContactButton.transform.gameObject.tag = "minimize";
                             yield return null;
                         }
                         expandContactButton_img.sprite = mini_sprite;
@@ -129,6 +135,8 @@ public class ExpandUIScript : MonoBehaviour
                         while (rect.sizeDelta.y > size.y)
                         {
                             rect.sizeDelta -= new Vector2(0, 500 * Time.deltaTime);
+                            //change button tag to minimize
+                            expandContactButton.transform.gameObject.tag = "maximize";
                             yield return null;
                         }
                         expandContactButton_img.sprite = maxi_sprite;
@@ -156,6 +164,8 @@ public class ExpandUIScript : MonoBehaviour
             ContactRect_anchor.sizeDelta = maximizeSize;
             introButton.interactable = true;
             expandIntroButton_img.sprite = mini_sprite;
+            //change button tag to minimize
+            expandIntroButton.transform.gameObject.tag = "minimize";
         }
         else
         {
@@ -163,6 +173,8 @@ public class ExpandUIScript : MonoBehaviour
             ContactRect_anchor.sizeDelta = minimizeSize;
             introButton.interactable = false;
             expandIntroButton_img.sprite = maxi_sprite;
+            //change button tag to minimize
+            expandIntroButton.transform.gameObject.tag = "maximize";
         }
     }
 
@@ -179,11 +191,15 @@ public class ExpandUIScript : MonoBehaviour
         {
             ContactRect_mask.sizeDelta = maximizeSize_2;
             expandContactButton_img.sprite = mini_sprite;
+            //change button tag to minimize
+            expandContactButton.transform.gameObject.tag = "minimize";
         }
         else
         {
             ContactRect_mask.sizeDelta = minimizeSize_2;
             expandContactButton_img.sprite = maxi_sprite;
+            //change button tag to minimize
+            expandContactButton.transform.gameObject.tag = "maximize";
         }
     }
 
@@ -191,7 +207,5 @@ public class ExpandUIScript : MonoBehaviour
     {
         maximizeSize = new Vector2(IntroRect.rect.width, introText.preferredHeight);
         minimizeSize = new Vector2(IntroRect.rect.width, 0);
-        maximizeSize_2 = new Vector2(ContactRect_mask.rect.width, ContactRect_mask.rect.height);
-        minimizeSize_2 = new Vector2(ContactRect_mask.rect.width, 0);
     }
 }

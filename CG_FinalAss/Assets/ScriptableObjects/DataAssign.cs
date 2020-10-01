@@ -8,7 +8,8 @@ using UnityEngine.SceneManagement;
 public class DataAssign : MonoBehaviour
 {
     public Portfolio[] portfolio;
-    public Text index, portfolioname;
+    public Text[] index;
+    public Text[] portfolioname;
     public GameObject panel;
 
     [Header("Profile")]
@@ -24,14 +25,12 @@ public class DataAssign : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //index.text = portfolio.indexnumber.ToString();
-        //portfolioname.text = portfolio.profileText[0];
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        for(int i = 0; i < index.Length; i++)
+        {
+            int num = i + 1;
+            index[i].text = num + ".";
+        }
+        AssignSaveFileName();
     }
 
     public void SaveFile(int index)
@@ -65,5 +64,22 @@ public class DataAssign : MonoBehaviour
         skills.text = "" + portfolio[index].skills;
         EventManager.TriggerEvent("refreshText");
         panel.SetActive(false);
+    }
+
+    void AssignSaveFileName()
+    {
+        for (int i = 0; i < portfolioname.Length; i++)
+        {
+            portfolioname[i].text = portfolio[i].profileText[0];
+
+            if(portfolioname[i].text == "" || portfolioname[i].text == "Empty*" || portfolioname[i].text == "—")
+            {
+                portfolioname[i].text = "Empty Portfolio";
+            }
+            else
+            {
+                portfolioname[i].fontStyle = FontStyle.Bold;
+            }
+        }
     }
 }

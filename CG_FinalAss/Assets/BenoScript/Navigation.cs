@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Navigation : MonoBehaviour
 {
@@ -15,7 +16,15 @@ public class Navigation : MonoBehaviour
     {
         biographyPanel.SetActive(false);
         skillsPanel.SetActive(false);
-        saveloadpanel.SetActive(false);
+        int index = SceneManager.GetActiveScene().buildIndex;
+        if(index == 1)
+        {
+            saveloadpanel.SetActive(false);
+        }
+        else
+        {
+            saveloadpanel.SetActive(true);
+        }
     }
 
     // Update is called once per frame

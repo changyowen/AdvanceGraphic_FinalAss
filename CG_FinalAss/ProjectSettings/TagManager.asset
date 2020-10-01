@@ -7,6 +7,8 @@ TagManager:
   - Fire
   - CreatePortfolio
   - ViewPortfolio
+  - minimize
+  - maximize
   layers:
   - Default
   - TransparentFX
