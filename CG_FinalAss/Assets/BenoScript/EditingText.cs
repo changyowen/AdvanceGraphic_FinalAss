@@ -39,11 +39,13 @@ public class EditingText : MonoBehaviour
     public void saveChanges()
     {
         outputText.text = textcontent;
+        EventManager.TriggerEvent("refreshText");
         panel.SetActive(false);
     }
 
     public void discardChanges()
     {
+        EventManager.TriggerEvent("refreshText");
         panel.SetActive(false);
     }
 

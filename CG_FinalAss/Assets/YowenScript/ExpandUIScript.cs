@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class ExpandUIScript : MonoBehaviour
 {
@@ -25,11 +26,11 @@ public class ExpandUIScript : MonoBehaviour
         minimizeSize = new Vector2(IntroRect.rect.width, 0);
         maximizeSize_2 = new Vector2(ContactRect_mask.rect.width, ContactRect_mask.rect.height);
         minimizeSize_2 = new Vector2(ContactRect_mask.rect.width, 0);
-    }
 
-    void Update()
-    {
-        Debug.Log(alreadyExpand_aboutMe);
+        ExpandAboutMe();
+        ExpandAboutMe();
+        ExpandContact();
+        ExpandContact();
     }
 
     public void ExpandAboutMe()
