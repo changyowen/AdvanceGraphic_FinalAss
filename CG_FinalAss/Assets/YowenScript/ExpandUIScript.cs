@@ -11,6 +11,9 @@ public class ExpandUIScript : MonoBehaviour
     public Text introText;
     public GameObject ContactAnchorPoint;
     public GameObject ContactMaskContent;
+    public Button expandIntroButton, expandContactButton;
+    public Image expandIntroButton_img, expandContactButton_img;
+    public Sprite maxi_sprite, mini_sprite;
 
     private bool alreadyExpand_aboutMe = false;
     private bool alreadyExpand_contact = false;
@@ -26,11 +29,13 @@ public class ExpandUIScript : MonoBehaviour
         minimizeSize = new Vector2(IntroRect.rect.width, 0);
         maximizeSize_2 = new Vector2(ContactRect_mask.rect.width, ContactRect_mask.rect.height);
         minimizeSize_2 = new Vector2(ContactRect_mask.rect.width, 0);
+        expandIntroButton_img = expandIntroButton.transform.gameObject.GetComponent<Image>();
+        expandContactButton_img = expandContactButton.transform.gameObject.GetComponent<Image>();
 
-        ExpandAboutMe();
-        ExpandAboutMe();
-        ExpandContact();
-        ExpandContact();
+        ExpandAboutMe_instant();
+        ExpandAboutMe_instant();
+        ExpandContact_instant();
+        ExpandContact_instant();
     }
 
     public void ExpandAboutMe()
@@ -44,6 +49,105 @@ public class ExpandUIScript : MonoBehaviour
 
         if(alreadyExpand_aboutMe)
         {
+            expandIntroButton.interactable = false;
+            StartCoroutine(changeSize(0, maximizeSize, IntroRect, true, true));
+            StartCoroutine(changeSize(0, maximizeSize, ContactRect_anchor, true, true));
+        }
+        else
+        {
+            expandIntroButton.interactable = false;
+            StartCoroutine(changeSize(0, minimizeSize, IntroRect, false, false));
+            StartCoroutine(changeSize(0, minimizeSize, ContactRect_anchor, false, false));
+        }
+    }
+
+    public void ExpandContact()
+    {
+        if (alreadyExpand_aboutMe)
+        {
+            ExpandAboutMe();
+        }
+
+        alreadyExpand_contact = !alreadyExpand_contact;
+
+        if (alreadyExpand_contact)
+        {
+            expandContactButton.interactable = false;
+            StartCoroutine(changeSize(1, maximizeSize_2, ContactRect_mask, true, true));
+        }
+        else
+        {
+            expandContactButton.interactable = false;
+            StartCoroutine(changeSize(1, minimizeSize_2, ContactRect_mask, true, false));
+        }
+    }
+
+    IEnumerator changeSize(int index, Vector2 size, RectTransform rect, bool interactable, bool magnifying)
+    {
+        switch (index)
+        {
+            case 0:
+                {
+                    if (magnifying == true)
+                    {
+                        while (rect.sizeDelta.y < size.y)
+                        {
+                            rect.sizeDelta += new Vector2( 0, 80 * Time.deltaTime);
+                            yield return null;
+                        }
+                        expandIntroButton_img.sprite = mini_sprite;
+                        introButton.interactable = interactable;
+                    }
+                    else
+                    {
+                        while (rect.sizeDelta.y > size.y)
+                        {
+                            rect.sizeDelta -= new Vector2( 0, 80 * Time.deltaTime);
+                            yield return null;
+                        }
+                        expandIntroButton_img.sprite = maxi_sprite;
+                        introButton.interactable = interactable;
+                    }
+                    expandIntroButton.interactable = true;
+                    break;
+                }
+            case 1:
+                {
+                    if (magnifying == true)
+                    {
+                        while (rect.sizeDelta.y < size.y)
+                        {
+                            rect.sizeDelta += new Vector2(0, 500 * Time.deltaTime);
+                            yield return null;
+                        }
+                        expandContactButton_img.sprite = mini_sprite;
+                    }
+                    else
+                    {
+                        while (rect.sizeDelta.y > size.y)
+                        {
+                            rect.sizeDelta -= new Vector2(0, 500 * Time.deltaTime);
+                            yield return null;
+                        }
+                        expandContactButton_img.sprite = maxi_sprite;
+                    }
+                    expandContactButton.interactable = true;
+                    break;
+                }
+        }
+    }
+
+    public void ExpandAboutMe_instant()
+    {
+        if (alreadyExpand_contact)
+        {
+            ExpandContact_instant();
+        }
+
+        alreadyExpand_aboutMe = !alreadyExpand_aboutMe;
+
+        if (alreadyExpand_aboutMe)
+        {
             IntroRect.sizeDelta = maximizeSize;
             ContactRect_anchor.sizeDelta = maximizeSize;
             introButton.interactable = true;
@@ -56,11 +160,11 @@ public class ExpandUIScript : MonoBehaviour
         }
     }
 
-    public void ExpandContact()
+    public void ExpandContact_instant()
     {
         if (alreadyExpand_aboutMe)
         {
-            ExpandAboutMe();
+            ExpandAboutMe_instant();
         }
 
         alreadyExpand_contact = !alreadyExpand_contact;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIPulsingScript : MonoBehaviour
 {
-    public Animator UIanim;
+    Animator UIanim;
 
     // Start is called before the first frame update
     void Start()

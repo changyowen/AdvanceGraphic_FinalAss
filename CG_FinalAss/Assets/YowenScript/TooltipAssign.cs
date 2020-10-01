@@ -16,4 +16,9 @@ public class TooltipAssign : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         Tooltip.HideTooltip_static();
     }
+
+    public void HideTooltipManual()
+    {
+        Tooltip.HideTooltip_static();
+    }
 }
