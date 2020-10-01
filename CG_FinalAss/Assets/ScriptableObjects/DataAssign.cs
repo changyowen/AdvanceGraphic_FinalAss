@@ -24,7 +24,7 @@ public class DataAssign : MonoBehaviour
     void Start()
     {
         index.text = portfolio.indexnumber.ToString();
-        portfolioname.text = portfolio.name;
+        portfolioname.text = portfolio.profileText[0];
     }
 
     // Update is called once per frame
@@ -37,14 +37,14 @@ public class DataAssign : MonoBehaviour
     {
         for(int i = 0; i < 5; i++)
         {
-            portfolio.profileText[i] = profileText[i].ToString();
+            portfolio.profileText[i] = profileText[i].text;
         }
         for(int i = 0; i < 11; i++)
         {
-            portfolio.biographyText[i] = biographyText[i].ToString();
+            portfolio.biographyText[i] = biographyText[i].text;
         }
-        portfolio.experience = experience.ToString();
-        portfolio.skills = skills.ToString();
+        portfolio.experience = experience.text;
+        portfolio.skills = skills.text;
         OpeningManager.OpeningIndex = 2;
         SceneManager.LoadScene("MainMenu");
     }
@@ -59,8 +59,8 @@ public class DataAssign : MonoBehaviour
         {
             biographyText[i].text = portfolio.biographyText[i];
         }
-        portfolio.experience = experience.ToString();
-        portfolio.skills = skills.ToString();
+        experience.text = portfolio.experience;
+        skills.text = portfolio.skills;
         panel.SetActive(false);
     }
 }

@@ -29,8 +29,12 @@ public class Navigation : MonoBehaviour
         biography.SetActive(false);
         skills.SetActive(false);
         biographyPanel.SetActive(true);
-        saveButton.SetActive(false);
-        discardButton.SetActive(false);
+        if(saveButton != null)
+        {
+            saveButton.SetActive(false);
+            discardButton.SetActive(false);
+        }
+
     }
 
     public void CloseBiography()
@@ -38,8 +42,11 @@ public class Navigation : MonoBehaviour
         biography.SetActive(true);
         skills.SetActive(true);
         biographyPanel.SetActive(false);
-        saveButton.SetActive(true);
-        discardButton.SetActive(true);
+        if (saveButton != null)
+        {
+            saveButton.SetActive(true);
+            discardButton.SetActive(true);
+        }
     }
 
     public void OpenSkills()
@@ -47,8 +54,11 @@ public class Navigation : MonoBehaviour
         biography.SetActive(false);
         skills.SetActive(false);
         skillsPanel.SetActive(true);
-        saveButton.SetActive(false);
-        discardButton.SetActive(false);
+        if (saveButton != null)
+        {
+            saveButton.SetActive(false);
+            discardButton.SetActive(false);
+        }
     }
 
     public void CloseSkills()
@@ -56,8 +66,11 @@ public class Navigation : MonoBehaviour
         biography.SetActive(true);
         skills.SetActive(true);
         skillsPanel.SetActive(false);
-        saveButton.SetActive(true);
-        discardButton.SetActive(true);
+        if (saveButton != null)
+        {
+            saveButton.SetActive(true);
+            discardButton.SetActive(true);
+        }
     }
 
     public void saveload()
