@@ -37,7 +37,7 @@ public class DataStoreLoad : MonoBehaviour
 
     public void DiscardFile()
     {
-        OpeningManager.OpeningIndex = 3;
+        OpeningManager.OpeningIndex = 2;
         SceneManager.LoadScene("MainMenu");
     }
 
