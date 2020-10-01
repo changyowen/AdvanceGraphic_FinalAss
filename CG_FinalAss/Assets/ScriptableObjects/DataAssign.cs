@@ -63,6 +63,7 @@ public class DataAssign : MonoBehaviour
         }
         experience.text = "" + portfolio[index].experience;
         skills.text = "" + portfolio[index].skills;
+        EventManager.TriggerEvent("refreshText");
         panel.SetActive(false);
     }
 }

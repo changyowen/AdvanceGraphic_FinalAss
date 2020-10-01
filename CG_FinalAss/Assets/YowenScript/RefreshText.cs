@@ -8,10 +8,14 @@ public class RefreshText : MonoBehaviour
 {
     [Header("Blue Part")]
     public Text[] text_BluePart;
+    public GameObject ExpandUI_obj;
 
     [Header("White Part")]
     public Text[] text_WhitePart;
     public GameObject Skill_anchorPoint, workingExperience_obj, personalSkill_obj, workingButton, skillButton;
+
+    [Header("Reversable")]
+    public bool reverse = false;
 
     void OnEnable()
     {
@@ -34,8 +38,16 @@ public class RefreshText : MonoBehaviour
         {
             if(text_BluePart[i].text == "" || text_BluePart[i].text == "Empty*")
             {
-                text_BluePart[i].text = "Empty*";
-                text_BluePart[i].color = Color.red;
+                if(reverse)
+                {
+                    text_BluePart[i].text = "—";
+                    text_BluePart[i].color = Color.white;
+                }
+                else
+                {
+                    text_BluePart[i].text = "Empty*";
+                    text_BluePart[i].color = Color.red;
+                }
             }
             else
             {
@@ -46,8 +58,16 @@ public class RefreshText : MonoBehaviour
         {
             if (text_WhitePart[i].text == "" || text_WhitePart[i].text == "Empty*")
             {
-                text_WhitePart[i].text = "Empty*";
-                text_WhitePart[i].color = Color.red;
+                if(reverse)
+                {
+                    text_WhitePart[i].text = "—";
+                    text_WhitePart[i].color = Color.black;
+                }
+                else
+                {
+                    text_WhitePart[i].text = "Empty*";
+                    text_WhitePart[i].color = Color.red;
+                }
             }
             else
             {
@@ -60,12 +80,17 @@ public class RefreshText : MonoBehaviour
 
     void RefreshPosition()
     {
+        //rectTransform declaration white part
         RectTransform anchorRect = Skill_anchorPoint.GetComponent<RectTransform>();
         RectTransform WE_objRect = workingExperience_obj.GetComponent<RectTransform>();
         RectTransform PS_objRect = personalSkill_obj.GetComponent<RectTransform>();
         RectTransform workingButtonRect = workingButton.GetComponent<RectTransform>();
         RectTransform skillButtonRect = skillButton.GetComponent<RectTransform>();
 
+        //reposition blue part
+        ExpandUI_obj.GetComponent<ExpandUIScript>().ExpandAboutMe_instant();
+        ExpandUI_obj.GetComponent<ExpandUIScript>().ExpandAboutMe_instant();
+        //reposition white part
         Vector2 newTextSize = new Vector2(WE_objRect.rect.width, text_WhitePart[11].preferredHeight);
         WE_objRect.sizeDelta = newTextSize;
         workingButtonRect.sizeDelta = newTextSize;

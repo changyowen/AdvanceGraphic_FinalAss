@@ -40,6 +40,8 @@ public class ExpandUIScript : MonoBehaviour
 
     public void ExpandAboutMe()
     {
+        RedefineTextSize();
+
         if (alreadyExpand_contact)
         {
             ExpandContact();
@@ -139,6 +141,8 @@ public class ExpandUIScript : MonoBehaviour
 
     public void ExpandAboutMe_instant()
     {
+        RedefineTextSize();
+
         if (alreadyExpand_contact)
         {
             ExpandContact_instant();
@@ -151,12 +155,14 @@ public class ExpandUIScript : MonoBehaviour
             IntroRect.sizeDelta = maximizeSize;
             ContactRect_anchor.sizeDelta = maximizeSize;
             introButton.interactable = true;
+            expandIntroButton_img.sprite = mini_sprite;
         }
         else
         {
             IntroRect.sizeDelta = minimizeSize;
             ContactRect_anchor.sizeDelta = minimizeSize;
             introButton.interactable = false;
+            expandIntroButton_img.sprite = maxi_sprite;
         }
     }
 
@@ -172,10 +178,20 @@ public class ExpandUIScript : MonoBehaviour
         if (alreadyExpand_contact)
         {
             ContactRect_mask.sizeDelta = maximizeSize_2;
+            expandContactButton_img.sprite = mini_sprite;
         }
         else
         {
             ContactRect_mask.sizeDelta = minimizeSize_2;
+            expandContactButton_img.sprite = maxi_sprite;
         }
+    }
+
+    void RedefineTextSize()
+    {
+        maximizeSize = new Vector2(IntroRect.rect.width, introText.preferredHeight);
+        minimizeSize = new Vector2(IntroRect.rect.width, 0);
+        maximizeSize_2 = new Vector2(ContactRect_mask.rect.width, ContactRect_mask.rect.height);
+        minimizeSize_2 = new Vector2(ContactRect_mask.rect.width, 0);
     }
 }

@@ -14,22 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indexnumber: 5
   profileText:
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Empty*
+  - Empty*
+  - Empty*
+  - Empty*
+  - Empty*
   biographyText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  experience: 
-  skills: 
+  - Empty*
+  - Empty*
+  - Empty*
+  - Empty*
+  - Empty*
+  - Empty*
+  - Empty*
+  - Empty*
+  - Empty*
+  - Empty*
+  - Empty*
+  experience: yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+  skills: Empty*
