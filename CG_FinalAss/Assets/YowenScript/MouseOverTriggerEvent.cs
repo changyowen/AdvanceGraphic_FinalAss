@@ -8,6 +8,7 @@ public class MouseOverTriggerEvent : MonoBehaviour
 {
     public GameObject ButtonText, Smoke, Player;
     ParticleSystem smokeParticleSystem;
+    public GameObject normalScreen, AnimateScreen;
     Animator TextAnimator;
     bool mouseOver = false;
     public PlayableDirector playToPc, playToFolder;
@@ -39,9 +40,12 @@ public class MouseOverTriggerEvent : MonoBehaviour
                     PulsingScript pulsingScript_keyboard = this.gameObject.transform.parent.transform.GetChild(1).gameObject.GetComponent<PulsingScript>();
                     if (PcScreen != null)
                     {
-                        PcScreen.material = Resources.Load("MonitorActivateScreen", typeof(Material)) as Material;
+                        //PcScreen.material = Resources.Load("MonitorActivateScreen", typeof(Material)) as Material;
+                        
                     }
-                    if(pulsingScript_monitor != null && pulsingScript_keyboard != null)
+                    normalScreen.SetActive(false);
+                    AnimateScreen.SetActive(true);
+                    if (pulsingScript_monitor != null && pulsingScript_keyboard != null)
                     {
                         if (pulsingScript_monitor.coroutineAllowed)
                         {
@@ -93,8 +97,10 @@ public class MouseOverTriggerEvent : MonoBehaviour
                     Renderer PcScreen = transform.GetChild(0).gameObject.GetComponent<Renderer>();
                     if (PcScreen != null)
                     {
-                        PcScreen.material = Resources.Load("MonitorrDeactivateScreen", typeof(Material)) as Material;
+                        //PcScreen.material = Resources.Load("MonitorrDeactivateScreen", typeof(Material)) as Material;
                     }
+                    normalScreen.SetActive(true);
+                    AnimateScreen.SetActive(false);
                     break;
                 }
             case "ViewPortfolio":
