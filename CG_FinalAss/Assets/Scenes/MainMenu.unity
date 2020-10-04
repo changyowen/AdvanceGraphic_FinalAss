@@ -6144,7 +6144,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
@@ -14899,6 +14899,26 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862344365541186165, guid: 18a3db5bf104367499c2746e124662f1,
+        type: 3}
+      propertyPath: RotationModule.x.minMaxState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862344365541186165, guid: 18a3db5bf104367499c2746e124662f1,
+        type: 3}
+      propertyPath: RotationModule.x.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862344365541186165, guid: 18a3db5bf104367499c2746e124662f1,
+        type: 3}
+      propertyPath: RotationModule.y.minMaxState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862344365541186165, guid: 18a3db5bf104367499c2746e124662f1,
+        type: 3}
+      propertyPath: RotationModule.y.scalar
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18a3db5bf104367499c2746e124662f1, type: 3}

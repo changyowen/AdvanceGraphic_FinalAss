@@ -1,7 +1,4 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
-// Rainbow shader with lots of adjustable properties!
-
+﻿
 Shader "_Shaders/Rainbow" {
 	Properties{
 		_Saturation("Saturation", Range(0.0, 1.0)) = 0.8
@@ -45,7 +42,7 @@ Shader "_Shaders/Rainbow" {
 	}
 
 	fixed4 frag(fragmentInput i) : SV_TARGET{
-		fixed2 lPos = i.localPosition / _Spread;
+	fixed2 lPos = i.localPosition / _Spread;
 	half time = _Time.y * _Speed / _Spread;
 	half timeWithOffset = time + _TimeOffset;
 	fixed sine = sin(timeWithOffset);

@@ -19,7 +19,6 @@ public class TestGetPrefferedHeight : MonoBehaviour
         minimizeSize = new Vector2(rectTransform.rect.width, rectTransform.rect.height);
     }
 
-
     public void test()
     {
         Max = !Max;
