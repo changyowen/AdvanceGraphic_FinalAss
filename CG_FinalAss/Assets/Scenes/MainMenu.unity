@@ -3108,6 +3108,11 @@ MonoBehaviour:
   Player: {fileID: 581080838}
   normalScreen: {fileID: 0}
   AnimateScreen: {fileID: 0}
+  PCstand: {fileID: 0}
+  Keyboard: {fileID: 0}
+  usedLightning: {fileID: 0}
+  normalGrey: {fileID: 0}
+  rainbowMat: {fileID: 0}
   playToPc: {fileID: 125316661}
   playToFolder: {fileID: 306811268}
 --- !u!1 &405743373
@@ -4221,7 +4226,7 @@ Transform:
   - {fileID: 215909952}
   - {fileID: 924917885}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: -209.22299, z: 0}
 --- !u!1001 &564514354
 PrefabInstance:
@@ -4311,7 +4316,7 @@ Transform:
   m_Children:
   - {fileID: 1298828915}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &581080840
 MonoBehaviour:
@@ -6172,7 +6177,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &876218746
 PrefabInstance:
@@ -6711,6 +6716,11 @@ MonoBehaviour:
   Player: {fileID: 581080838}
   normalScreen: {fileID: 545202695}
   AnimateScreen: {fileID: 535807893}
+  PCstand: {fileID: 942708638}
+  Keyboard: {fileID: 1826315341}
+  usedLightning: {fileID: 1343649639}
+  normalGrey: {fileID: 2100000, guid: 8621dfcb3dbf229428e45425021e0875, type: 2}
+  rainbowMat: {fileID: 2100000, guid: b6dcda0d3553f674c8cbb71217eabd4e, type: 2}
   playToPc: {fileID: 125316661}
   playToFolder: {fileID: 306811268}
 --- !u!114 &942708644
@@ -7969,11 +7979,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127310099}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.75, y: 2.5, z: -3.75}
+  m_LocalPosition: {x: 2.7557335, y: 2.1012278, z: 1.6830153}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1491798271}
-  m_RootOrder: 5
+  m_Father: {fileID: 1343649640}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1128712945
 PrefabInstance:
@@ -8651,11 +8661,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166432542}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.75, y: 2.5, z: 7}
+  m_LocalPosition: {x: 2.7557335, y: 2.1012278, z: 12.433016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1491798271}
-  m_RootOrder: 3
+  m_Father: {fileID: 1343649640}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1179036850
 PrefabInstance:
@@ -9695,6 +9705,87 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1343236645}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1343649639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1343649640}
+  - component: {fileID: 1343649641}
+  m_Layer: 0
+  m_Name: Lightning_Used
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1343649640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343649639}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.994267, y: 0.3987723, z: -5.4330153}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1166432544}
+  - {fileID: 1449250892}
+  - {fileID: 1127310101}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1343649641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343649639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a23b1060471884486faedc718a1468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightObject:
+  - {fileID: 1166432543}
+  - {fileID: 1449250891}
+  - {fileID: 1127310100}
+  useRainbowColors: 0
+  colorGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0, b: 0, a: 1}
+    key1: {r: 0, g: 1, b: 0, a: 1}
+    key2: {r: 0.5803922, g: 0, b: 0.827451, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  duration: 1
 --- !u!1001 &1367324790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10299,11 +10390,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449250890}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.75, y: 2.5, z: 1.5}
+  m_LocalPosition: {x: 2.7557335, y: 2.1012278, z: 6.9330153}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1491798271}
-  m_RootOrder: 4
+  m_Father: {fileID: 1343649640}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1452966225
 PrefabInstance:
@@ -10696,9 +10787,6 @@ Transform:
   - {fileID: 1326161920}
   - {fileID: 779580994}
   - {fileID: 1475722245}
-  - {fileID: 1166432544}
-  - {fileID: 1449250892}
-  - {fileID: 1127310101}
   m_Father: {fileID: 77306143}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12834,7 +12922,7 @@ Transform:
   m_Children:
   - {fileID: 396735961}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 29.137001}
 --- !u!1001 &1891516119
 PrefabInstance:
@@ -13761,7 +13849,7 @@ Transform:
   - {fileID: 340135950}
   - {fileID: 905998677}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2066644267
 MonoBehaviour:

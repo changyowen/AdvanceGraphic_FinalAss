@@ -9,6 +9,10 @@ public class MouseOverTriggerEvent : MonoBehaviour
     public GameObject ButtonText, Smoke, Player;
     ParticleSystem smokeParticleSystem;
     public GameObject normalScreen, AnimateScreen;
+    public GameObject PCstand, Keyboard, usedLightning;
+    RainbowLightning rainbowLightning;
+    public Material normalGrey, rainbowMat;
+    Material[] PCmats, KeyboardMats;
     Animator TextAnimator;
     bool mouseOver = false;
     public PlayableDirector playToPc, playToFolder;
@@ -19,6 +23,15 @@ public class MouseOverTriggerEvent : MonoBehaviour
     {
         TextAnimator = ButtonText.GetComponent<Animator>();
         smokeParticleSystem = Smoke.GetComponent<ParticleSystem>();
+        if(PCstand != null && Keyboard != null)
+        {
+            PCmats = PCstand.GetComponent<Renderer>().materials;
+            KeyboardMats = Keyboard.GetComponent<Renderer>().materials;
+        }
+        if(usedLightning != null)
+        {
+            rainbowLightning = usedLightning.GetComponent<RainbowLightning>();
+        }
     }
 
     // Update is called once per frame
@@ -56,6 +69,16 @@ public class MouseOverTriggerEvent : MonoBehaviour
                             StartCoroutine(pulsingScript_keyboard.StartPulsing());
                         }
                     }
+
+                    //change pc to rainbow texture
+                    PCmats[1] = rainbowMat;
+                    PCstand.GetComponent<Renderer>().materials = PCmats;
+                    KeyboardMats[0] = rainbowMat;
+                    Keyboard.GetComponent<Renderer>().materials = KeyboardMats;
+
+                    //change lightning to rainbow color
+                    rainbowLightning.useRainbowColors = true;
+
                     break;
                 }
             case "ViewPortfolio":
@@ -101,6 +124,16 @@ public class MouseOverTriggerEvent : MonoBehaviour
                     }
                     normalScreen.SetActive(true);
                     AnimateScreen.SetActive(false);
+
+                    //change pc to normal texture
+                    PCmats[1] = normalGrey;
+                    PCstand.GetComponent<Renderer>().materials = PCmats;
+                    KeyboardMats[0] = normalGrey;
+                    Keyboard.GetComponent<Renderer>().materials = KeyboardMats;
+
+                    //change lightning back to white color
+                    rainbowLightning.useRainbowColors = false;
+
                     break;
                 }
             case "ViewPortfolio":

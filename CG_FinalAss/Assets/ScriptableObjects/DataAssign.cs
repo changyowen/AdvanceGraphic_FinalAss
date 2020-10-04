@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
+//using UnityEditor;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -45,7 +45,7 @@ public class DataAssign : MonoBehaviour
         }
         portfolio[index].experience = experience.text;
         portfolio[index].skills = skills.text;
-        EditorUtility.SetDirty(portfolio[index]);
+        //EditorUtility.SetDirty(portfolio[index]);
         OpeningManager.OpeningIndex = 2;
         SceneManager.LoadScene("MainMenu");
     }
